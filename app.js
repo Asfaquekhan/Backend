@@ -1,6 +1,10 @@
 import 'dotenv/config'
 import { MongoClient } from 'mongodb';
 import express from 'express'
+import cors from "cors";
+
+
+
 const username =process.env.DB_USERNAME
 const password =process.env.DB_PASSWORD
 const mongoDB =`mongodb+srv://${username}:${password}@cluster0.ah1b5ds.mongodb.net/`;
@@ -15,6 +19,7 @@ const collectionName = 'data'; // Replace with your collection name
 
 const app = express();
 const port = 3000; // Change to your desired port number
+app.use(cors());
 
 
 app.get('/api/recipes', async (req, res) => {
