@@ -1,8 +1,7 @@
 
-import mongoose from 'mongoose';
-const { Schema } = mongoose;
+const mongoose = require('mongoose');
 
-const blogSchema = new Schema({
+const yourSchema = new mongoose.Schema({
 
   Srno: Number,
   RecipeName: String,
@@ -21,6 +20,5 @@ const blogSchema = new Schema({
   URL: String,
     
 });
-
-export default mongoose.model('data', blogSchema);
+module.exports = mongoose.model('Recipe', yourSchema);
 
