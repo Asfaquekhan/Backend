@@ -3,6 +3,7 @@ const controllers = require('../controllers/Recipe_Functions.js')
 const router =express.Router();
 
 router.route('/').get(controllers.getBy_RecipeName)
-router.route('/testing').get(controllers.getAllProductsTesting) 
+router.route('/diet').get(controllers.getDietOptions) 
+router.route('/cuisines').get(controllers.getCuisines)
 
 module.exports = router;
