@@ -5,7 +5,7 @@ const product_routes = require('./functions/routes/Recipe_Routes.js');
 const connect = require('./functions/Database/connect.js')
 
 const app = express();
-const port = 3000; // Change to your desired port number
+const port = 3000; 
 app.use(express.json());
 app.use(cors());
 
